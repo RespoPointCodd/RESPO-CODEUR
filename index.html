@@ -99,11 +99,11 @@
 
   <!-- Contenu principal -->
   <div class="container mt-5">
-    <h1 data-aos="fade-right">Bienvenue sur mon blog</h1>
-    <p data-aos="fade-left">Ici, vous trouverez des articles, des réflexions, des projets et bien plus encore.</p>
+    <h1>Bienvenue sur mon blog</h1>
+    <p>Ici, vous trouverez des articles, des réflexions, des projets et bien plus encore.</p>
 
     <div class="row">
-      <div class="col-md-8" data-aos="fade-up">
+      <div class="col-md-8">
         <h2>Derniers articles</h2>
         <div class="card mb-3">
           <div class="card-body">
@@ -112,32 +112,25 @@
             <a href="#" class="btn btn-primary" style="background-color: #ff6600; border: none;">Lire la suite</a>
           </div>
         </div>
-        <!-- Nouvelle section : Galerie -->
-        <div class="card mb-3" data-aos="zoom-in">
-          <div class="card-body">
-            <h5 class="card-title">Galerie</h5>
-            <p>Une collection d’images inspirantes et de moments capturés.</p>
-            <a href="#" class="btn btn-warning">Voir la galerie</a>
-          </div>
-        </div>
-
-        <!-- Nouvelle section : Projets récents -->
-        <div class="card mb-3" data-aos="zoom-in-up">
-          <div class="card-body">
-            <h5 class="card-title">Projets récents</h5>
-            <p>Voici quelques projets sur lesquels j’ai travaillé récemment.</p>
-            <a href="#" class="btn btn-warning">Découvrir les projets</a>
-          </div>
-        </div>
       </div>
 
-      <div class="col-md-4" data-aos="fade-left">
+      <div class="col-md-4">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">À propos de moi</h5>
             <p class="card-text">Un court texte présentant l'auteur du blog, sa passion, son parcours, etc.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nouvelle section -->
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Une section supplémentaire</h5>
+        <p>Ajoutée pour enrichir le contenu de votre blog.</p>
       </div>
     </div>
   </div>
@@ -162,6 +155,7 @@
           <p>
             <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a><br>
             <a href="mailto:monadresse@gmail.com"><i class="fas fa-envelope"></i> Gmail</a><br>
+            <a href="https://www.facebook.com/moncomptefacebook" target="_blank"><i class="fab fa-facebook"></i> Facebook</a><br>
             <i class="fas fa-phone"></i> +33 6 12 34 56 78
           </p>
         </div>
@@ -169,13 +163,13 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    // Animations GSAP
+    gsap.from("h1, h2, h5", { opacity: 0, y: -50, duration: 1 });
+    gsap.from(".card", { opacity: 0, scale: 0.9, duration: 1, stagger: 0.3 });
+    gsap.from("footer", { opacity: 0, y: 50, duration: 1 });
   </script>
 </body>
 
