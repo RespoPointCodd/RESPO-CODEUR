@@ -4,113 +4,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Blog Parfait</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Mon Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fff9f5;
+      background-color: #fff8f0;
     }
+
     .navbar {
-      background-color: #ff7f50;
+      background-color: #ff7f50 !important;
     }
-    .navbar-brand, .nav-link, .btn {
+
+    .navbar-brand img {
+      height: 40px;
+    }
+
+    .nav-link {
       color: white !important;
     }
+
     .nav-link:hover {
       text-decoration: underline;
     }
-    .hero {
-      background: linear-gradient(to right, #ffa07a, #ff7f50);
+
+    .btn-outline-success {
+      border-color: white;
       color: white;
-      padding: 60px 0;
-      text-align: center;
     }
+
+    .btn-outline-success:hover {
+      background-color: white;
+      color: #ff7f50;
+    }
+
+    h1, h2, h5 {
+      color: #ff6600;
+    }
+
     .card {
-      transition: transform 0.3s;
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
+
     .card:hover {
-      transform: scale(1.02);
+      transform: translateY(-5px);
     }
-    .footer {
-      background-color: #ff7f50;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
+
+    footer {
+      background-color: #ffe4d1;
+      padding: 40px 0;
+      color: #333;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+    .footer-links a:hover {
+      color: #ff6600;
     }
   </style>
 </head>
 
 <body>
-  <!-- Header / Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Mon Blog</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo du blog"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Accueil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Articles</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">À propos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-home"></i> Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-blog"></i> Articles</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-info-circle"></i> À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
-        <form class="d-flex ms-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Rechercher...">
-          <button class="btn btn-outline-light" type="submit">Chercher</button>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Rechercher">
+          <button class="btn btn-outline-success" type="submit">Rechercher</button>
         </form>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1 class="display-4">Bienvenue sur mon blog parfait</h1>
-      <p class="lead">Des articles inspirants, du style et de la passion.</p>
-      <a href="#" class="btn btn-light btn-lg mt-3">Découvrir</a>
-    </div>
-  </section>
+  <!-- Contenu principal -->
+  <div class="container mt-5">
+    <h1 data-aos="fade-right">Bienvenue sur mon blog</h1>
+    <p data-aos="fade-left">Ici, vous trouverez des articles, des réflexions, des projets et bien plus encore.</p>
 
-  <!-- Blog Posts -->
-  <div class="container my-5">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Article 1">
+    <div class="row">
+      <div class="col-md-8" data-aos="fade-up">
+        <h2>Derniers articles</h2>
+        <div class="card mb-3">
           <div class="card-body">
             <h5 class="card-title">Titre de l'article</h5>
-            <p class="card-text">Un court résumé de l'article pour donner envie de lire la suite...</p>
-            <a href="#" class="btn btn-primary">Lire plus</a>
+            <p class="card-text">Un extrait de l'article ou une courte introduction...</p>
+            <a href="#" class="btn btn-primary" style="background-color: #ff6600; border: none;">Lire la suite</a>
+          </div>
+        </div>
+        <!-- Nouvelle section : Galerie -->
+        <div class="card mb-3" data-aos="zoom-in">
+          <div class="card-body">
+            <h5 class="card-title">Galerie</h5>
+            <p>Une collection d’images inspirantes et de moments capturés.</p>
+            <a href="#" class="btn btn-warning">Voir la galerie</a>
+          </div>
+        </div>
+
+        <!-- Nouvelle section : Projets récents -->
+        <div class="card mb-3" data-aos="zoom-in-up">
+          <div class="card-body">
+            <h5 class="card-title">Projets récents</h5>
+            <p>Voici quelques projets sur lesquels j’ai travaillé récemment.</p>
+            <a href="#" class="btn btn-warning">Découvrir les projets</a>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Article 2">
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Titre de l'article</h5>
-            <p class="card-text">Un autre extrait captivant d'un article intéressant...</p>
-            <a href="#" class="btn btn-primary">Lire plus</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Article 3">
-          <div class="card-body">
-            <h5 class="card-title">Titre de l'article</h5>
-            <p class="card-text">Encore un article passionnant à découvrir...</p>
-            <a href="#" class="btn btn-primary">Lire plus</a>
+            <h5 class="card-title">À propos de moi</h5>
+            <p class="card-text">Un court texte présentant l'auteur du blog, sa passion, son parcours, etc.</p>
           </div>
         </div>
       </div>
@@ -118,13 +143,40 @@
   </div>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer>
     <div class="container">
-      <p>&copy; 2025 Mon Blog Parfait. Tous droits réservés.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <h5>À propos du blog</h5>
+          <p>Ce blog partage des idées, des expériences et des réflexions personnelles.</p>
+        </div>
+        <div class="col-md-4 footer-links">
+          <h5>Liens utiles</h5>
+          <a href="#">Accueil</a>
+          <a href="#">Articles</a>
+          <a href="#">À propos</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="col-md-4">
+          <h5>Me contacter</h5>
+          <p>
+            <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a><br>
+            <a href="mailto:monadresse@gmail.com"><i class="fas fa-envelope"></i> Gmail</a><br>
+            <i class="fas fa-phone"></i> +33 6 12 34 56 78
+          </p>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 
 </html>
