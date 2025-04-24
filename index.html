@@ -54,6 +54,11 @@
       transform: translateY(-5px);
     }
 
+    .animated-div:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+
     footer {
       background-color: #ffe4d1;
       padding: 40px 0;
@@ -69,6 +74,18 @@
 
     .footer-links a:hover {
       color: #ff6600;
+    }
+
+    .photo-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .photo-container img {
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
@@ -105,7 +122,7 @@
     <div class="row">
       <div class="col-md-8">
         <h2>Derniers articles</h2>
-        <div class="card mb-3">
+        <div class="card mb-3 animated-div">
           <div class="card-body">
             <h5 class="card-title">Titre de l'article</h5>
             <p class="card-text">Un extrait de l'article ou une courte introduction...</p>
@@ -115,7 +132,7 @@
       </div>
 
       <div class="col-md-4">
-        <div class="card">
+        <div class="card animated-div">
           <div class="card-body">
             <h5 class="card-title">À propos de moi</h5>
             <p class="card-text">Un court texte présentant l'auteur du blog, sa passion, son parcours, etc.</p>
@@ -123,15 +140,42 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Nouvelle section -->
-  <div class="container mt-5">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Une section supplémentaire</h5>
-        <p>Ajoutée pour enrichir le contenu de votre blog.</p>
+    <!-- 4 nouvelles sections -->
+    <div class="container mt-5">
+      <div class="card mb-3 animated-div">
+        <div class="card-body">
+          <h5 class="card-title">Section 1</h5>
+          <p>Contenu informatif pour enrichir votre blog.</p>
+        </div>
       </div>
+
+      <div class="card mb-3 animated-div">
+        <div class="card-body">
+          <h5 class="card-title">Section 2</h5>
+          <p>Informations supplémentaires captivantes pour les visiteurs.</p>
+        </div>
+      </div>
+
+      <div class="card mb-3 animated-div">
+        <div class="card-body">
+          <h5 class="card-title">Section 3</h5>
+          <p>Idées et ressources partageables.</p>
+        </div>
+      </div>
+
+      <div class="card mb-3 animated-div">
+        <div class="card-body">
+          <h5 class="card-title">Section 4</h5>
+          <p>Explorez davantage le contenu de votre blog.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Espace pour la photo -->
+    <div class="photo-container">
+      <img src="votrephoto.jpg" alt="Votre photo">
+      <p>Bienvenue, voici votre espace dédié à la photo.</p>
     </div>
   </div>
 
