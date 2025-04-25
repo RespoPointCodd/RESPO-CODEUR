@@ -90,6 +90,17 @@
     span {
       color: #ff6600;
     }
+
+    .notification-icon {
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .notification-icon:hover {
+      color: #fff0e0;
+    }
   </style>
 </head>
 
@@ -109,6 +120,8 @@
           <li class="nav-item"><a class="nav-link" href="a propos.html"><i class="fas fa-info-circle"></i> À propos</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
+        <!-- Cloche de notification -->
+        <i class="fas fa-bell notification-icon" onclick="envoyerNotification()" title="Notifications"></i>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Rechercher">
           <button class="btn btn-outline-success" type="submit">Rechercher</button>
@@ -138,7 +151,6 @@
       </div>
     </div>
 
-    <!-- Sections du blog -->
     <div class="container mt-5">
       <div class="card mb-3 animated-div">
         <div class="card-body">
@@ -161,7 +173,6 @@
       </div>
     </div>
 
-    <!-- Espace pour la photo -->
     <div class="photo-container">
       <img src="WhatsApp Image 2025-04-25 à 00.31.51_c95f28e3.jpg" alt="Votre photo">
       <p>RespoCodeur , de son vrai nom WILFRED DJIKIAKAM.</p>
@@ -178,10 +189,10 @@
         </div>
         <div class="col-md-4 footer-links">
           <h5>Liens utiles</h5>
-          <a href="#">Accueil</a>
-          <a href="#">Articles</a>
-          <a href="#">À propos</a>
-          <a href="#">Contact</a>
+          <a href="index.html">Accueil</a>
+          <a href="article.html">Articles</a>
+          <a href="a propos.html">À propos</a>
+          <a href="contact.html">Contact</a>
         </div>
         <div class="col-md-4">
           <h5>Me contacter</h5>
@@ -196,16 +207,30 @@
     </div>
   </footer>
 
-  <!-- JavaScript Bootstrap (pour menu responsive) -->
+  <!-- JS Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- GSAP animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script>
-    // Animations GSAP
     gsap.from("h1, h2, h5", { opacity: 0, y: -50, duration: 1 });
     gsap.from(".card", { opacity: 0, scale: 0.9, duration: 1, stagger: 0.3 });
     gsap.from("footer", { opacity: 0, y: 50, duration: 1 });
+
+    function envoyerNotification() {
+      if (Notification.permission === "granted") {
+        new Notification("RespoCodeur", {
+          body: "Nouvelle mise à jour disponible sur le blog de RespoCodeur !",
+          icon: "https://cdn-icons-png.flaticon.com/512/1827/1827379.png"
+        });
+      } else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then(permission => {
+          if (permission === "granted") {
+            envoyerNotification();
+          }
+        });
+      }
+    }
   </script>
 </body>
 
