@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - RESPOCODEUR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+    }
+
+    .navbar {
+      background-color: #ff7f50 !important;
+    }
+
+    .nav-link {
+      color: white !important;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    h1, h3 {
+      color: #ff6600;
+    }
+
+    .btn-orange {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+    }
+
+    .btn-orange:hover {
+      background-color: #e65500;
+    }
+
+    .card {
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #ffe4d1;
+      padding: 40px 0;
+      color: #333;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+    .footer-links a:hover {
+      color: #ff6600;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo" style="height: 40px;"></a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
+          <li class="nav-item"><a class="nav-link" href="a-propos.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenu principal -->
+  <div class="container mt-5">
+    <h1 class="text-center">Contactez-moi</h1>
+    <p class="text-center">Une idée, un projet, une question ? Parlons-en ! Je suis à votre écoute.</p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card p-4">
+          <h3 class="mb-3">Formulaire de contact</h3>
+          <form>
+            <div class="mb-3">
+              <label for="nom" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="nom" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Adresse email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-orange">Envoyer par e-mail</button>
+            <a href="#" id="whatsappBtn" target="_blank" class="btn btn-success ms-2"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <h5>Mon slogan :</h5>
+      <blockquote class="blockquote">"Du code propre, des idées simples, des solutions efficaces."
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>À propos du blog</h5>
+          <p>Ce blog partage des idées, des expériences et des réflexions personnelles.</p>
+        </div>
+        <div class="col-md-4 footer-links">
+          <h5>Liens utiles</h5>
+          <a href="index.html">Accueil</a>
+          <a href="articles.html">Articles</a>
+          <a href="a-propos.html">À propos</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="col-md-4">
+          <h5>Me contacter</h5>
+          <p>
+            <a href="https://wa.me/672922360" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a><br>
+            <a href="mailto:respopointcodd@gmail.com"><i class="fas fa-envelope"></i> Gmail</a><br>
+            <a href="https://www.facebook.com/Le Respo Codeur" target="_blank"><i class="fab fa-facebook"></i> Facebook</a><br>
+            <i class="fas fa-phone"></i> +237 672922360
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Animations JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    gsap.from("h1, h3", { opacity: 0, y: -40, duration: 1, stagger: 0.2 });
+    gsap.from(".card", { opacity: 0, scale: 0.95, duration: 1, delay: 0.3 });
+    gsap.from("footer", { opacity: 0, y: 50, duration: 1 });
+
+    // Générer lien WhatsApp dynamique
+    document.querySelector("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const nom = document.getElementById("nom").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      const text = `Bonjour, je m'appelle ${nom} (%0AEmail : ${email})%0A%0A${message}`;
+      const url = `https://wa.me/1234567890?text=${encodeURIComponent(text)}`;
+      document.getElementById("whatsappBtn").href = url;
+      window.open(`mailto:monadresse@gmail.com?subject=Contact depuis le blog&body=${text}`);
+    });
+  </script>
+</body>
+
+</html>
