@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article - RESPOCODEUR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+    }
+
+    .navbar {
+      background-color: #ff7f50 !important;
+    }
+
+    .navbar-brand img {
+      height: 40px;
+    }
+
+    .nav-link {
+      color: white !important;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2, h5 {
+      color: #ff6600;
+    }
+
+    .article-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #ffe4d1;
+      padding: 40px 0;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+          <li class="nav-item"><a class="nav-link active" href="article.html"><i class="fas fa-blog"></i> Articles</a></li>
+          <li class="nav-item"><a class="nav-link" href="a propos.html"><i class="fas fa-info-circle"></i> À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="article-container">
+      <h1>Mon parcours de développeur</h1>
+      <p class="text-muted">Publié par RESPOCODEUR</p>
+      <hr>
+      <p>Salut à tous ! Aujourd’hui, je vous raconte un peu mon parcours en tant que développeur. Cela fait maintenant trois ans que je suis dans ce monde passionnant, et chaque jour est une occasion d’apprendre quelque chose de nouveau.</p>
+
+      <h2>Mes débuts</h2>
+      <p>J’ai commencé avec HTML, CSS et un peu de JavaScript. Très vite, je me suis passionné pour le développement web et j’ai plongé dans des frameworks comme React, puis des outils backend comme Node.js et Express.</p>
+
+      <h2>Mes projets</h2>
+      <p>J’ai travaillé sur des projets perso et pro : des blogs, des dashboards, des APIs REST. Ce que j’aime ? Voir une idée se transformer en une appli fonctionnelle. Rien de plus satisfaisant que de shipper quelque chose qui fonctionne bien et qui est utile.</p>
+
+      <h2>Pourquoi ce blog ?</h2>
+      <p>Partager mon expérience, mes galères, mes tips… Ce blog est une extension naturelle de mon envie d’échanger avec la communauté. J’espère que mes articles pourront aider d’autres développeurs.</p>
+
+      <p><strong>Merci d’avoir lu, et à bientôt pour un prochain article !</strong></p>
+    </div>
+  </div>
+
+  <footer class="mt-5">
+    <div class="container text-center">
+      <p>&copy; 2025 RESPOCODEUR - Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    // Animations GSAP pour la page article
+    gsap.from(".article-container", { opacity: 0, y: 50, duration: 1 });
+    gsap.from("h1, h2", { opacity: 0, y: -20, duration: 1, stagger: 0.2 });
+    gsap.from("footer", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
+  </script>
+</body>
+
+</html>
