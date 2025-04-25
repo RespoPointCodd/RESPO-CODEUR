@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - RESPOCODEUR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+    }
+
+    .navbar {
+      background-color: #ff7f50 !important;
+    }
+
+    .navbar-brand img {
+      height: 40px;
+    }
+
+    .nav-link {
+      color: white !important;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2, h3, h5 {
+      color: #ff6600;
+    }
+
+    .section-title {
+      border-bottom: 2px solid #ff6600;
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+    }
+
+    .btn-orange {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+    }
+
+    .btn-orange:hover {
+      background-color: #e65500;
+    }
+
+    .card {
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .photo-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .photo-container img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      background-color: #ffe4d1;
+      padding: 40px 0;
+      color: #333;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+    .footer-links a:hover {
+      color: #ff6600;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo du blog"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="articles.html"><i class="fas fa-blog"></i> Articles</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-user"></i> À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenu principal -->
+  <div class="container mt-5">
+    <h1 class="text-center">WILFRED DJIKIAKAM</h1>
+    <p class="text-center">Alias <strong>RESPOCODEUR</strong> – Développeur Web, APK & Windows</p>
+
+    <div class="photo-container">
+      <img src="IMG-20240420-WA0013.jpg" alt="Photo de Wilfred Djikiakam">
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h3 class="section-title">À propos</h3>
+        <p>Je suis un développeur camerounais passionné par le code et la création de solutions efficaces. Que ce soit sur le web, les applications mobiles Android ou les logiciels Windows, j’apporte des idées simples et des interfaces efficaces à mes projets. Je code notamment en <strong>C#</strong>, JavaScript, HTML/CSS, et plus encore.</p>
+      </div>
+      <div class="col-md-6">
+        <h3 class="section-title">Compétences</h3>
+        <ul>
+          <li>Développement Web (HTML, CSS, JS, Bootstrap)</li>
+          <li>Applications Android (APK)</li>
+          <li>Applications Windows (.NET / C#)</li>
+          <li>Intégration d’animations et UI réactives</li>
+          <li>Travail en équipe & Git</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h3 class="section-title">Expérience</h3>
+        <div class="card p-3 mb-3">
+          <h5>Développeur Web & Logiciel - Freelance</h5>
+          <p>Depuis 3 ans, je travaille sur divers projets allant de sites vitrines à des logiciels de gestion personnalisés.</p>
+        </div>
+        <div class="card p-3 mb-3">
+          <h5>Créateur du blog RESPOCODEUR</h5>
+          <p>Un espace pour partager mes projets, mes tutos, et mes réflexions sur le monde du développement.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <button class="btn btn-orange" onclick="window.print()"><i class="fas fa-file-download"></i> Télécharger le CV en PDF</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>À propos du blog</h5>
+          <p>Ce blog partage avec vous mon quotidien , mes competences , mon savoir-etre et mon savoir-faire.</p>
+        </div>
+        <div class="col-md-4 footer-links">
+          <h5>Liens utiles</h5>
+          <a href="index.html">Accueil</a>
+          <a href="articles.html">Articles</a>
+          <a href="a propos.html">À propos</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="col-md-4">
+          <h5>Me contacter</h5>
+          <p>
+            <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a><br>
+            <a href="mailto:monadresse@gmail.com"><i class="fas fa-envelope"></i> Gmail</a><br>
+            <a href="https://www.facebook.com/moncomptefacebook" target="_blank"><i class="fab fa-facebook"></i> Facebook</a><br>
+            <i class="fas fa-phone"></i> +33 6 12 34 56 78
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    // Animation d'entrée
+    gsap.from("h1, h3, h5", { opacity: 0, y: -40, duration: 1, stagger: 0.2 });
+    gsap.from(".card", { opacity: 0, scale: 0.95, duration: 1, stagger: 0.3 });
+    gsap.from("footer", { opacity: 0, y: 50, duration: 1 });
+    gsap.from(".photo-container", { opacity: 0, scale: 0.8, duration: 1, delay: 0.5 });
+  </script>
+</body>
+
+</html>
